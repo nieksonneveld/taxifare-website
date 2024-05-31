@@ -35,5 +35,5 @@ params = {'pickup_datetime':pickup_datetime,
 
 if st.button("Calculate my fare",type="primary"):
     results = requests.get(url,params).json()
-    prediction = results["fare"]
-    st.write(f"Your fare prediction is {prediction}.")
+    prediction = round(results["fare"],2)
+    st.write(f"Your fare prediction is ${prediction}")
