@@ -31,9 +31,9 @@ params = {'pickup_datetime':pickup_datetime,
             'dropoff_latitude':dropoff_latitude,
             'passenger_count':passenger_count}
 
-results = requests.get(url,params).json()
 
-prediction = results["fare"]
 
 if st.button("Calculate my fare",type="primary"):
+    results = requests.get(url,params).json()
+    prediction = results["fare"]
     st.write(f"Your fare prediction is {prediction}.")
