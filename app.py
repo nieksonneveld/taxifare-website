@@ -22,7 +22,7 @@ dropoff_longitude = st.text_input("Dropoff longitude", value=-73.984365)
 dropoff_latitude = st.text_input("Dropoff latitude", value=40.769802)
 passenger_count = st.slider("Passenger count",1,6,1)
 
-url = 'https://taxifare-d236uvw5wa-ew.a.run.app/predict'
+url = 'https://taxifare.lewagon.ai/predict'
 
 params = {'pickup_datetime':pickup_datetime,
             'pickup_longitude':pickup_longitude,
